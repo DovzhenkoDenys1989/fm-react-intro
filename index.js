@@ -47,7 +47,9 @@ class Counter extends React.Component {
   }
   decrement = () => {
     const {counter} = this.state;
-    this.setState({counter: counter - 1});
+    if(counter > 0){
+      this.setState({counter: counter - 1});
+    }
   }
   render() {
     return React.createElement(
